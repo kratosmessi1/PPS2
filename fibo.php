@@ -28,11 +28,12 @@
 
     // Parámetro hasta el que se imprime la secuencia de Fibonacci.
     $valor = 6;
-    if ($valor <= 0){
+    if ($valor <= 0 || $valor - (int)$valor != 0){
         
         echo "El valor no es adecuado para la secuencia de Fibonacci.";
     
     } else {
+
         // Array que guarda la secuencia de Fibonacci.
         $arr = fibonacci($valor);
         

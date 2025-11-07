@@ -21,21 +21,26 @@
             $secuencia = [0];
         
         }
+        if ($var <= 0 || $var - (int)$var != 0){
 
+            return false;
+
+        }
         // Devolver la secuencia.
         return $secuencia;
     }
 
     // Parámetro hasta el que se imprime la secuencia de Fibonacci.
     $valor = 6;
-    if ($valor <= 0 || $valor - (int)$valor != 0){
+
+    // Array que guarda la secuencia de Fibonacci.
+    $arr = fibonacci($valor);
+    
+    if ($arr == false){
         
         echo "El valor no es adecuado para la secuencia de Fibonacci.";
     
     } else {
-
-        // Array que guarda la secuencia de Fibonacci.
-        $arr = fibonacci($valor);
         
         echo "La secuencia de Fibonacci hasta el valor $valor es la siguiente: <br>";
     
